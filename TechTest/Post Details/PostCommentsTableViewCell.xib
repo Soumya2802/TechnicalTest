@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="121" id="KGk-i7-Jjw" customClass="PostCommentsTableViewCell" customModule="TechTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-Xl-c6j">
+                        <rect key="frame" x="20" y="19" width="354" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhX-y0-UHP">
+                        <rect key="frame" x="20" y="60" width="354" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fV6-1E-jsL">
+                        <rect key="frame" x="120.5" y="80" width="153" height="31"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Download comment"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3VQ-Xl-c6j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2Wf-t4-luf"/>
+                    <constraint firstItem="3VQ-Xl-c6j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="6Na-Wl-l0X"/>
+                    <constraint firstItem="LhX-y0-UHP" firstAttribute="top" secondItem="3VQ-Xl-c6j" secondAttribute="bottom" constant="20" id="7bW-2x-YXk"/>
+                    <constraint firstAttribute="bottom" secondItem="fV6-1E-jsL" secondAttribute="bottom" constant="10" id="F7L-bb-S0s"/>
+                    <constraint firstItem="fV6-1E-jsL" firstAttribute="top" secondItem="LhX-y0-UHP" secondAttribute="bottom" priority="250" constant="10" id="Ig9-Lh-7Zm"/>
+                    <constraint firstItem="LhX-y0-UHP" firstAttribute="leading" secondItem="3VQ-Xl-c6j" secondAttribute="leading" id="KRH-lT-hNz"/>
+                    <constraint firstAttribute="trailing" secondItem="3VQ-Xl-c6j" secondAttribute="trailing" constant="20" id="TAb-FY-wdL"/>
+                    <constraint firstItem="fV6-1E-jsL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="X7g-eX-Hos"/>
+                    <constraint firstItem="LhX-y0-UHP" firstAttribute="trailing" secondItem="3VQ-Xl-c6j" secondAttribute="trailing" id="gP2-0u-Ajs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="comment" destination="LhX-y0-UHP" id="VjG-KP-GPJ"/>
+                <outlet property="downloadButton" destination="fV6-1E-jsL" id="dIb-Ye-Htq"/>
+                <outlet property="name" destination="3VQ-Xl-c6j" id="Mgn-8x-Yy8"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="-120"/>
+        </tableViewCell>
+    </objects>
+</document>

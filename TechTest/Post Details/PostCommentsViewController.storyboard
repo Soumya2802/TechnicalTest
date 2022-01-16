@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Comments View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PostComments" id="Y6W-OH-hqX" customClass="PostCommentsViewController" customModule="TechTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB3-H2-55M">
+                                <rect key="frame" x="0.0" y="95" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Comments" image="text.bubble" selectedImage="text.bubble" id="j3k-AI-0R8"/>
+                                    <tabBarItem title="Offline Comments" image="text.bubble" selectedImage="text.bubble" id="lFN-SK-HaM"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="PwC-si-pGw"/>
+                                </connections>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="guf-EB-gdS">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1N3-cV-qPO" customClass="PostCommentsTableViewCell" customModule="TechTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1N3-cV-qPO" id="XjB-vR-qff">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2F5-rO-VA4"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Ul6-Xw-LJh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="guf-EB-gdS" secondAttribute="trailing" id="4of-G6-alF"/>
+                            <constraint firstItem="guf-EB-gdS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="Ano-ge-cfr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XB3-H2-55M" secondAttribute="trailing" id="JcQ-IQ-ldU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="XB3-H2-55M" secondAttribute="leading" id="Lnh-xc-2Vm"/>
+                            <constraint firstItem="guf-EB-gdS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rbW-sD-Jl5"/>
+                            <constraint firstItem="guf-EB-gdS" firstAttribute="top" secondItem="XB3-H2-55M" secondAttribute="bottom" id="sWQ-En-2it"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="guf-EB-gdS" secondAttribute="bottom" id="tA5-WN-66g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentsTabBar" destination="XB3-H2-55M" id="8TW-Uq-NTK"/>
+                        <outlet property="commentsTableView" destination="guf-EB-gdS" id="p02-kA-h9u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="text.bubble" width="24" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
